@@ -60,6 +60,8 @@ button {
     border: none;
     font-size: 20px;
     cursor: pointer;
+    text-decoration: none;
+    color: inherit;
     background-color: var(--body);
     box-shadow:  -3px -3px 7px var(--ws),
      3px 3px 5px  var(--bs);
@@ -76,7 +78,7 @@ button:active {
 }
 
 
-@media (max-width: 350px) {
+@media (max-width: 400px) {
     #calculator {
         width: 95%;
       }
