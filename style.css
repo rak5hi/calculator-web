@@ -1,0 +1,105 @@
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+:root {
+    --body : hsl(0, 0%, 90%);
+    --ws: white;
+    --bs: rgba(0, 0, 0, 0.15);
+  
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--body);
+}
+
+#calculator {
+    /* position: relative; */
+    max-width: 300px;
+    width: 100%;
+    border-radius: 12px;
+    padding: 10px 20px 20px;
+    background: var(--body);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: -3px -3px 7px var(--ws),
+                3px 3px 5px var(--bs);
+}
+
+#display {
+    height: 80px;
+    width: 100%;
+    outline: none;
+    border: none;
+    text-align: right;
+    margin-bottom: 10px;
+    font-size: 30px;
+    transition: font-size 0.3s ease-in-out;
+    color: #000e1a;
+    pointer-events: none;
+    background-color: var(--body);
+}
+
+#keys {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+button {
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: var(--body);
+    box-shadow:  -3px -3px 7px var(--ws),
+     3px 3px 5px  var(--bs);
+  }
+
+button:active {
+    transform: scale(0.99);
+    box-shadow: inset  -3px -3px 7px var(--ws),
+    inset 3px 3px 5px  var(--bs);
+}
+
+.operator-btn {
+  color: #2f9fff;
+}
+
+
+@media (max-width: 350px) {
+    #calculator {
+        width: 90%;
+      }
+            
+      button {
+        font-size: 15px;
+        padding: 12px 0;
+      }
+}
+
+@media (max-width: 300px) {
+    #calculator {
+        width: 100%;
+      }
+            
+      button {
+        font-size: 10px;
+      }
+}
+
+
+
+
+
+
+
